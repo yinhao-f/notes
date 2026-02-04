@@ -1,0 +1,6 @@
+site_name: My Docs
+site_url: https://site
+theme:
+  name: material
+  palette:
+    scheme: slate

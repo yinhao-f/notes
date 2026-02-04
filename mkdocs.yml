@@ -1,9 +1,12 @@
-site_name: My Docs
-site_url: https://site
+site_name: Yinhao's Personal Notes
+site_url: https://yinhao-f.github.io/notes/
 theme:
   name: material
-  palette:
 
+  icon:
+    logo: material/notebook
+
+  palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
       primary: teal

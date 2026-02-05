@@ -1,4 +1,4 @@
-# y86 Sequential
+# Y86 Sequential
 
 ## Calling coventions
 - Parameter passing

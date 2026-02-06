@@ -1,4 +1,4 @@
-# Testing strategies
+# Testing
 
 ## Ethics
 - Protect individuals affected by software behavior

@@ -150,3 +150,25 @@ Linux kernel can let you decide which branch is more likely to jump
 
 - CPI when squashing: number of cycles in total (including squashed ones b/c already entered pipeline) / number of instructions after squashing
 - Good branch prediction can reduce CPI
+
+## Other kinds of parallelism
+
+- Multiprocessing
+- Parallel runtimes
+- Multithreading
+- Hyper threading: while waiting for memory, work on another thread
+    - two copies of registers
+- Distributed systems
+    - Data centers
+
+### Flynn's taxonomy
+xIxD
+
+- Instruction stream
+- Data stream
+
+- SIMD: GPUs
+- MIMD: multiprocessing
+
+### Limits
+

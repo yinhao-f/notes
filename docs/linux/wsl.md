@@ -78,3 +78,15 @@ In the settings JSON file:
     }
 }
 ```
+
+## For my own OCD
+
+I want to keep a shortcut to the Fedora WSL in my taskbar, but when it opens, the icon in Windows Terminal is not Fedora's icon. Here is a quick workaround. 
+
+First, drag Fedora from start menu to task bar. Then, right click on the task bar shortcut and change the properties. In the "target" field, enter:
+
+```
+wt.exe --profile "<the WSL profile>"
+```
+
+Now enjoy the icon consistency!

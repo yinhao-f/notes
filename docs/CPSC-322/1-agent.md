@@ -1,6 +1,7 @@
 # What is AI
 
 Learning goals:
+
 - Explain what AI is 
 - Describe what an intelligent agent is 
 
@@ -11,6 +12,7 @@ Intelligent agents that think and act rationally in their environments. Rational
 ## What is an intelligent agent?
 
 An intelligent agent
+
 - is in some environment
 - can make observations
 - can act

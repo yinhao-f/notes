@@ -1,6 +1,7 @@
 # Constraint Satisfaction Problems
 
 Learning goals:
+
 - Define possible worlds in term of variables and their domains
 - Compute number of possible worlds on real examples
 - Specify constraints to represent real world problems differentiating between
@@ -97,6 +98,7 @@ Hill climbing and greedy descent are greedy algorithms. They may get stuck at lo
 ### Stochastic local search
 
 This addresses the problem with hill climbing and greedy descent. We can alternate between using:
+
 - Hill climbing or greedy descent
 - Random steps: move to a random neighbor
 - Random restart: reassign random values to all variables

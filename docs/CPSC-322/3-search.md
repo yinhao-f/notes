@@ -1,6 +1,7 @@
 # Search
 
 Learning goals:
+
 - Identify real-world examples that make use of deterministic, goal-driven planning agents
 - Assess the size of the search space of a given search problem
 - Trace through/implement a generic search algorithm
@@ -19,6 +20,7 @@ Learning goals:
 Consider a deterministic, planning agent. It is initially in a start state and given a goal. The environment only changes when it acts. It also perfectly knows what actions can be taken and the results of these actions. **The sequence of actions** is the solution. 
 
 Examples:
+
 - Delivery robot
 - 8-puzzle
 - Vacuum cleaner bot

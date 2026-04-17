@@ -14,7 +14,9 @@ $$P(S|H) = \frac{P(H|S)P(S)}{P(H)}$$
 $X$ and $Y$ are independent iff any of:
 
 $$P(X|Y) = P(X)$$
+
 $$P(Y|X) = P(Y)$$
+
 $$P(X,Y) = P(X)P(Y)$$
 
 ### Conditional independence

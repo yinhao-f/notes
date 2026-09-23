@@ -13,3 +13,11 @@
   - fixed if same link
 - End-to-end delay
   - variable
+
+### Total delay
+
+$$ \frac {S} {1-U} $$
+
+### Queueing delay
+
+

@@ -1,6 +1,7 @@
 # Design of the Internet
 
-Components:  
+Components
+
 - hosts/end systems
 - routers
 - communication links
@@ -29,7 +30,8 @@ Analogous to telephone switching, dedicated path between source and destination
 
 Data divided into packets to be sent, each can take different routes
 
-Pros:  
+Pros
+
 - good statistical performance is enough
 - bursty demand
 - frequent new conversations
@@ -37,7 +39,8 @@ Pros:
 
 ## Protocols
 
-A protocol defines:  
+A protocol defines
+
 - roles of communicating entities
 - format of messages
 - order of messages

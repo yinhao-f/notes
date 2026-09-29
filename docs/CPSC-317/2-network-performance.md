@@ -12,9 +12,9 @@ Metrics
 ## Note on units
 
 - Data size: bytes, B, KB, MB, GB
-    - K = $2^10$
-    - M = $2^20$
-    - G = $2^30$
+    - K = $2^{10}$
+    - M = $2^{20}$
+    - G = $2^{30}$
 - Data rate: bits per second, bps, Kbps, Mbps
     - K = $10^3$
     - M = $10^6$
@@ -45,7 +45,7 @@ Delay from data being sent to data being received
 Latency for sending something and receiving something back
 
 - easier to compute than one-way latency
-- `ping`, `traceroute` reports RTT
+- `ping` and `traceroute` report RTT
 
 ## Jitter
 
@@ -59,19 +59,40 @@ Causes:
 - poor hardware, old equipment
 - wireless interference
 
-## Delays
+## Delay
 
-- Processing delay
-  - fixed
-- Queueing delay
-  - variable
-- Transmission delay
-  - fixed if using same link
-  - time it takes to get the data on the link
-- Propagation delay
-  - fixed if same link
-- End-to-end delay
-  - variable
+- processing delay
+    - examine a packet and find out where to direct it
+    - from application layer to physical
+    - fixed
+- queueing delay
+    - wait time for access to the link
+    - after data is processed and before it is transmitted
+    - variable
+- transmission delay
+    - time it takes to get the data on the link
+    - after queueing
+    - fixed if using the same link
+- propagation delay
+    - time to move each bit from source to destination on the medium
+    - after transmission
+    - fixed if using the same link
+- end-to-end delay
+    - sum of all delays
+    - variable
+
+## Traffic intensity
+
+- rate at which data arrives
+- rate at which router can process data
+
+### Calculation
+
+- number of packets arriving per second ($a$)
+- average packet size ($L$) in bits
+- transmission rate: rate at which bits are sent per second ($R$)
+
+$$ \text{Traffic intensity} = \frac {La} {R} $$
 
 ### Total delay
 

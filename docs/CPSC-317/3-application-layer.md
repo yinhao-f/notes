@@ -1,5 +1,101 @@
 # Application Layer
 
+## Design for application layer protocols
+
+- each application will define its own protocol
+- open vs proprietary
+- client-server, peer-to-peer
+- choice of transport protocol
+- types and formats of messages
+
+## Open and proprietary protocols
+
+### Open
+
+- DICT, HTTP, SMTP, SSH
+- usually defined in RFCs
+- many different implementations
+
+### Proprietary
+
+- Skype, Zoom
+- only one implementation
+
+## Client-server architecture
+
+- well defined roles
+- server always on
+- client establishes connection
+- always between one client and one server
+
+## Peer-to-peer architecture
+
+- usually between peers with the same hierarchical role
+- peers request service from other peers, provide service in return
+- self scalability
+- complex peer address management
+
+## Quality of service
+
+- data loss
+- time sensitivity
+- bandwidth
+
+### UDP
+
+- simple, fast
+- unreliable, no order guarantee
+
+### TCP
+
+- reliable, order guarantee, congestion control
+- slower
+
+### Examples
+
+- file transfer, web, email $\rightarrow$ TCP
+- media streaming $\rightarrow$ UDP
+- DNS $\rightarrow$ UDP
+
+## Transport layer address and socket
+
+### Transport layer address
+
+Host name plus a port number
+
+### Socket
+
+Network endpoint created using system call `socket()`  
+`close()`, `send()` or `write()`, `recv()` or `read()`, `close()`
+
+## HTTP
+
+- the World Wide Web's main application layer protocol
+- client-server model
+    - TCP port 90 or 443 for HTTPS
+- one request and one response for each web object
+- stateless
+    - use cookies to maintain state
+- message format: ASCII
+- request methods: GET, POST, HEAD
+- status codes
+
+### HTTP connections
+
+- HTTP 1.0 (non-persistent)
+    - one object at most for each TCP connection
+- HTTP 1.1 (persistent)
+    - multiple requests with one connection
+- HTTP 1.1 with pipelining
+    - clients can send multiple requests without waiting for response
+    - one RTT for TCP connection, one for HTTP page, one for all additional objects
+
+### Web cache
+
+Stores some information of web pages, usually faster to retrieve
+
+## DNS
+
 ## Email
 
 ### Simple Mail Transfer Protocol (SMTP)

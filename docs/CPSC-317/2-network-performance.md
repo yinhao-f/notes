@@ -85,6 +85,8 @@ Causes:
 
 - rate at which data arrives
 - rate at which router can process data
+- helps understand how busy a link is
+- queuing delay is related to this
 
 ### Calculation
 
@@ -94,8 +96,23 @@ Causes:
 
 $$ \text{Traffic intensity} = \frac {La} {R} $$
 
-### Total delay
+Bits arriving per second / bits sent per second
 
-$$ \frac {S} {1-U} $$
+## Queuing problem
 
-### Queueing delay
+- packets may not be spaced out evenly
+- packets may not be sent evenly (congestion in the link)
+
+## Total delay and queuing delay
+
+- assume packets arrive at an exponential distribution
+
+$$ \text{Total delay} = \frac {S} {1-U} $$
+
+- $S$ is the average service time when server is idle
+- $U$ is server utilization, usually traffic intensity
+
+$$ \text{Queuing delay} = \frac {S} {1-U} - S = \frac {US} {1-U} $$
+
+Routers don't have infinite buffer, so packets may need to be dropped if they arrive too fast. Packets can also be corrupted and need to be dropped. 
+

@@ -123,3 +123,30 @@ Stores some information of web pages, usually faster to retrieve
 - HTTP, web mail
 - proprietary protocols, Microsoft Exchange
 
+## Peer-to-peer
+
+BitTorrent, developed in 2001, was designed for peer-to-peer file sharing. 
+
+### Data sharing examples
+
+- gaming
+- software updates
+
+### BitTorrent
+
+N+M machines participate in this network. N hosts have the actual file contents and are called **seeds**. All hosts are called **peers**. Instead of having a single server that sends the file to all clients, the seed will send a portion of the file to each peer that needs the file. Then, each peer can send its portion to other peers. Finally every host will assemble the portions and have the complete file. This can save tons of time. 
+
+Each portion has a fixed size, except for the last part. Every part is also encrypted with a hash. There is a summary file (torrent file) that tells the total number of pieces, the hash for the entire file, and where to look for peers. 
+
+Basic operations include finding peers and finding pieces. For finding pieces, each peer shares information about the identities of the pieces, so that they know who to find to get the piece. A group of peers is called a **swarm**. 
+
+Some policies: ask for the rarest piece first, which will increase the overall health of a file. 
+
+#### Implementation
+
+BitTorrent is a open-source protocol, and uses TCP mostly. Some also use μTP which is a reliable UDP. 
+
+
+## Blockchain
+
+Blocks communicate to decide which block to add next to the chain. You have to do a lot of work to prove the history, and it is encouraged. This is why bitcoin mining was popular.  

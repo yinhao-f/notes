@@ -1,15 +1,43 @@
 ## Culling vs clipping
 
-## How to decide if an object should be rendered
+## Culling vs clipping
 
-Bounding boxes:
+- culling: throws away an object entirely
+    - reduce computation load
+    - optimization, not a must
+- clipping: trims part of an object that's out of the view frustum
+    - simplifies rasterization
+    - for correctness
+
+## Bounding volume
 
 - sphere
-- AABB
-- OBB
+- AABB - axis aligned bounding box
+- OBB - oriented bounding box
+- 8-DOP - 8-sided discrete orientation polytope
 - convex hull
 
-Tighter bounding boxes are also more costly. Depending on the scene, for static scenes use AABB, for movement use spheres. 
+### Bounding volume hierarchy (BVH)
+
+```
+test(node):
+    check node.volume against frustum
+    if outside:
+        discard the subtree and return
+    if inside:
+        draw subtree
+    if intersect:
+        draw leaf or recurse onto children
+```
+
+
+## View volume culling
+
+## View volume clipping
+
+## Backface culling
+
+## occlusion culling
 
 ## Point-plane distance
 

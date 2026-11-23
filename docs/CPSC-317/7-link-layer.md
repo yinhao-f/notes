@@ -99,3 +99,19 @@ switch vs router
 - switch is link layer
 - router cannot broadcast
 - router is network layer
+
+### Dynamic Host Configuration Protocol (DHCP)
+
+- Application layer
+- runs on top of UDP
+- has four phases
+    - discover
+    - offer
+    - request
+    - ack
+
+What if there are two machines requesting for an IP at the same time? - Differentiate by the transaction IDs
+
+More than one DHCP server? - Client requests one IP address and servers will know if it was offered by themselves. 
+
+
